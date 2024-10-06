@@ -67,7 +67,9 @@ exports.createEvent = async (req, res) => {
 exports.getAllEvents = async (req, res) => {
   try {
     const events = await Event.find({}, 'title _id date');
-    res.status(200).json(events);
+    res.status(200).json({
+      events: events
+    });
   } catch (e) {
     res.status(500).json({ Error:  `error fetching events ${e}`})
   }
