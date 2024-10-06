@@ -15,6 +15,7 @@ An Event Management System built with Node.js, Express.js, and MongoDB. This sys
 
 ## Features that could be added
 
+- **Use typescript for better type checking**
 - **Pagination while fetching the events**
 - **Login for participants**
 - **Adding logic to remove events from db after they have taken place using ttl**
