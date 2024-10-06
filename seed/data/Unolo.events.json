@@ -1,0 +1,47 @@
+[{
+  "_id": {
+    "$oid": "6702c78c2d6945ded112a020"
+  },
+  "title": "Tech Meetup",
+  "date": {
+    "$date": "2024-10-15T14:30:00.000Z"
+  },
+  "location": "New York",
+  "maxParticipants": 100,
+  "confirmedParticipants": [],
+  "waitlistParticipants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6702c7b02d6945ded112a022"
+  },
+  "title": "Coldplay",
+  "date": {
+    "$date": "2025-01-17T14:30:00.000Z"
+  },
+  "location": "Mumbai",
+  "maxParticipants": 1500,
+  "confirmedParticipants": [],
+  "waitlistParticipants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6702c7f52d6945ded112a025"
+  },
+  "title": "meeting co-founder",
+  "date": {
+    "$date": "2024-10-10T14:30:00.000Z"
+  },
+  "location": "Delhi",
+  "maxParticipants": 2,
+  "confirmedParticipants": [
+    "founder",
+    "founder-3"
+  ],
+  "waitlistParticipants": [
+    "founder-4"
+  ],
+  "__v": 5
+}]

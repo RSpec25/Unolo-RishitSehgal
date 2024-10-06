@@ -52,7 +52,14 @@ An Event Management System built with Node.js, Express.js, and MongoDB. This sys
 
 3. **Rename `.env.sample` file in the root directory add mongo url, port, jwt_secret**
 
-4. **Start the dev server:**
+
+4. **Get seed data by running the following command**
+
+  ```bash
+   npm run seed:local
+   ```
+
+5. **Start the dev server:**
 
    ```bash
    npm run dev
