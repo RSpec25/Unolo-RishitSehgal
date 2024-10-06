@@ -9,6 +9,7 @@ An Event Management System built with Node.js, Express.js, and MongoDB. This sys
 - [Installation](#installation)
 - [Usage](#usage)
   - [API Endpoints](#api-endpoints)
+- [Curls](#curls)
 
 ---
 
@@ -112,6 +113,7 @@ http://localhost:5000/admin/add/event   // for adding events
 #### 1. Getting All Events
 
 - **Endpoint:** `GET /events`
+- **Description:** This route lets user to fetch all events title and id. Using id of events, user can view list or join event.
 - **Response:**
 
   ```json
@@ -123,7 +125,7 @@ http://localhost:5000/admin/add/event   // for adding events
 #### 2. Adding Event
 
 - **Endpoint:** `POST /admin/add/event`
-- **Description:** Admins create a new event.
+- **Description:** Admins create a new event. Need to put ISO in date. Can use https://www.timestamp-converter.com/ to get ISO.
 - **Request Headers:**
 
   ```http
@@ -154,7 +156,7 @@ http://localhost:5000/admin/add/event   // for adding events
 #### 3. Join Event
 
 - **Endpoint:** `POST events/:eventId/join`
-- **Description:** Users join an event.
+- **Description:** Users join an event. Can pass name/id anything
 - **Request Headers:**
 
   ```http
@@ -211,7 +213,7 @@ http://localhost:5000/admin/add/event   // for adding events
 #### 5. Cancel Participation
 
 - **Endpoint:** `POST events/:eventId/cancel`
-- **Description:** Users cancel their participation.
+- **Description:** Users cancel their participation. Need to pass same name/id as they have passed while joining.
 - **Request Headers:**
 
   ```http
@@ -252,4 +254,37 @@ http://localhost:5000/admin/add/event   // for adding events
     }
     ```
 
+---
+
+## Curls
+  ***Postman API curls (PORT:5000)
+
+**Get events curl:**
+  ```
+    curl --location 'http://localhost:5000/api/v1/events/' 
+  ```
+
+**View participants:**
+  ```
+    curl --location 'http://localhost:5000/api/v1/events/6702c7f52d6945ded112a025/participants'
+  ```
+
+**Join event**
+  ```
+      curl --location 'http://localhost:3000/api/v1/events/6702c7f52d6945ded112a025/join' \
+      --header 'Content-Type: application/json' \
+      --data '{ "user":"co-founder"}'
+  ```
+**Admin Login 1st time**
+  ```
+      curl --location 'http://localhost:3000/api/v1/admin/login' \
+      --header 'Content-Type: application/json' \
+      --data '{ "username":"admin123", "password":"admin123" }'
+  ```
+**Cancel event**
+  ```
+    curl --location 'http://localhost:3000/api/v1/events/6702c7f52d6945ded112a025/cancel' \
+    --header 'Content-Type: application/json' \
+    --data '{ "user":"co-founder"}'
+  ```
 ---
