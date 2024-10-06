@@ -16,7 +16,9 @@ An Event Management System built with Node.js, Express.js, and MongoDB. This sys
 
 - **Pagination while fetching the events**
 - **Login for participants**
-- **Adding logic to remove events from db after they have taken place using ttl** 
+- **Adding logic to remove events from db after they have taken place using ttl**
+- **Using better authentication**
+- **Using different seed for hashing password everytime**
 
 ---
 
@@ -119,6 +121,7 @@ http://localhost:5000/admin/add/event   // for adding events
 
   ```http
   Content-Type: application/json
+  Authorisation: {token}
   ```
 
 - **Request Body:**
