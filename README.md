@@ -121,6 +121,7 @@ http://localhost:5000/admin/add/event   // for adding events
 
   ```http
   Content-Type: application/json
+  Authorisation: {token}
   ```
 
 - **Request Body:**
