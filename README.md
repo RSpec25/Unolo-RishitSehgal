@@ -18,6 +18,7 @@ An Event Management System built with Node.js, Express.js, and MongoDB. This sys
 - **Login for participants**
 - **Adding logic to remove events from db after they have taken place using ttl**
 - **Using better authentication**
+- **Using different seed for hashing password everytime**
 
 ---
 
